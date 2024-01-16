@@ -134,7 +134,7 @@ public class GunJack extends Item {
 		list.add("Four barrels? Heck yes!");
 		list.add("");
 		list.add("Ammo: Quadruple Shotgun Shells");
-		list.add("Damage: 12 - 24");
+		list.add("Damage: 12 - 240");
 		list.add("Projectiles: 24 - 48");
 		list.add("");
 		list.add("[LEGENDARY WEAPON]");
