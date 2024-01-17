@@ -4922,7 +4922,7 @@ public class ModItems {
 		
 		ArmorMaterial aMatHEV = EnumHelper.addArmorMaterial("HBM_HEV", 150, new int[] { 3, 8, 6, 3 }, 100);
 		aMatHEV.customCraftingMaterial = ModItems.plate_armor_hev;
-		hev_helmet = new ArmorHEV(aMatHEV, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 1000000, 10000, 2500, 0).setMod(0.5F).setCap(10F).setThreshold(2.0F)
+		hev_helmet = new ArmorHEV(aMatHEV, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 1000000, 10000, 2500, 0).setMod(0.6F).setCap(10F).setThreshold(2.0F)
 				.addEffect(new PotionEffect(Potion.moveSpeed.id, 20, 1))
 				.addEffect(new PotionEffect(Potion.jump.id, 20, 0))
 				.setBlastProtection(0.25F)
