@@ -4885,7 +4885,7 @@ public class ModItems {
 		
 		ArmorMaterial aMatBJ = EnumHelper.addArmorMaterial("HBM_BLACKJACK", 150, new int[] { 3, 8, 6, 3 }, 100);
 		aMatBJ.customCraftingMaterial = ModItems.plate_armor_lunar;
-		bj_helmet = new ArmorBJ(aMatBJ, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 10000000, 10000, 1000, 100).setMod(0.5F).setCap(4.0F).setThreshold(10F)
+		bj_helmet = new ArmorBJ(aMatBJ, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 10000000, 10000, 1000, 100).setMod(0.5F).setCap(10F).setThreshold(4F)
 				.setFireproof(true)
 				.enableVATS(true)
 				.enableThermalSight(true)
