@@ -4715,15 +4715,15 @@ public class ModItems {
 		bismuth_plate = new ArmorBismuth(MainRegistry.aMatBismuth, 1, RefStrings.MODID + ":textures/armor/starmetal_2.png").cloneStats((ArmorFSB) bismuth_helmet).setCap(8F).setMod(0.3F).setUnlocalizedName("bismuth_plate").setTextureName(RefStrings.MODID + ":bismuth_plate");
 		bismuth_legs = new ArmorBismuth(MainRegistry.aMatBismuth, 2, RefStrings.MODID + ":textures/armor/starmetal_1.png").cloneStats((ArmorFSB) bismuth_helmet).setCap(8F).setMod(0.3F).setUnlocalizedName("bismuth_legs").setTextureName(RefStrings.MODID + ":bismuth_legs");
 		bismuth_boots = new ArmorBismuth(MainRegistry.aMatBismuth, 3, RefStrings.MODID + ":textures/armor/starmetal_1.png").cloneStats((ArmorFSB) bismuth_helmet).setCap(8F).setMod(0.3F).setUnlocalizedName("bismuth_boots").setTextureName(RefStrings.MODID + ":bismuth_boots");
-		titanium_helmet = new ArmorFSB(MainRegistry.aMatTitan, 0, RefStrings.MODID + ":textures/armor/titanium_1.png").setMod(0.85F).setUnlocalizedName("titanium_helmet").setMaxStackSize(1).setTextureName(RefStrings.MODID + ":titanium_helmet");
+		titanium_helmet = new ArmorFSB(MainRegistry.aMatTitan, 0, RefStrings.MODID + ":textures/armor/titanium_1.png").setMod(0.9F).setUnlocalizedName("titanium_helmet").setMaxStackSize(1).setTextureName(RefStrings.MODID + ":titanium_helmet");
 		titanium_plate = new ArmorFSB(MainRegistry.aMatTitan, 1, RefStrings.MODID + ":textures/armor/titanium_1.png").cloneStats((ArmorFSB) titanium_helmet).setUnlocalizedName("titanium_plate").setMaxStackSize(1).setTextureName(RefStrings.MODID + ":titanium_plate");
 		titanium_legs = new ArmorFSB(MainRegistry.aMatTitan, 2, RefStrings.MODID + ":textures/armor/titanium_2.png").cloneStats((ArmorFSB) titanium_helmet).setUnlocalizedName("titanium_legs").setMaxStackSize(1).setTextureName(RefStrings.MODID + ":titanium_legs");
 		titanium_boots = new ArmorFSB(MainRegistry.aMatTitan, 3, RefStrings.MODID + ":textures/armor/titanium_1.png").cloneStats((ArmorFSB) titanium_helmet).setUnlocalizedName("titanium_boots").setTextureName(RefStrings.MODID + ":titanium_boots");
-		steel_helmet = new ArmorFSB(MainRegistry.aMatSteel, 0, RefStrings.MODID + ":textures/armor/steel_1.png").setMod(0.9F).setUnlocalizedName("steel_helmet").setTextureName(RefStrings.MODID + ":steel_helmet");
+		steel_helmet = new ArmorFSB(MainRegistry.aMatSteel, 0, RefStrings.MODID + ":textures/armor/steel_1.png").setMod(0.95F).setUnlocalizedName("steel_helmet").setTextureName(RefStrings.MODID + ":steel_helmet");
 		steel_plate = new ArmorFSB(MainRegistry.aMatSteel, 1, RefStrings.MODID + ":textures/armor/steel_1.png").cloneStats((ArmorFSB) steel_helmet).setUnlocalizedName("steel_plate").setTextureName(RefStrings.MODID + ":steel_plate");
 		steel_legs = new ArmorFSB(MainRegistry.aMatSteel, 2, RefStrings.MODID + ":textures/armor/steel_2.png").cloneStats((ArmorFSB) steel_helmet).setUnlocalizedName("steel_legs").setTextureName(RefStrings.MODID + ":steel_legs");
 		steel_boots = new ArmorFSB(MainRegistry.aMatSteel, 3, RefStrings.MODID + ":textures/armor/steel_1.png").cloneStats((ArmorFSB) steel_helmet).setUnlocalizedName("steel_boots").setTextureName(RefStrings.MODID + ":steel_boots");
-		alloy_helmet = new ArmorFSB(MainRegistry.aMatAlloy, 0, RefStrings.MODID + ":textures/armor/alloy_1.png").setMod(0.75F).setUnlocalizedName("alloy_helmet").setTextureName(RefStrings.MODID + ":alloy_helmet");
+		alloy_helmet = new ArmorFSB(MainRegistry.aMatAlloy, 0, RefStrings.MODID + ":textures/armor/alloy_1.png").setMod(0.85F).setUnlocalizedName("alloy_helmet").setTextureName(RefStrings.MODID + ":alloy_helmet");
 		alloy_plate = new ArmorFSB(MainRegistry.aMatAlloy, 1, RefStrings.MODID + ":textures/armor/alloy_1.png").cloneStats((ArmorFSB) alloy_helmet).setUnlocalizedName("alloy_plate").setTextureName(RefStrings.MODID + ":alloy_plate");
 		alloy_legs = new ArmorFSB(MainRegistry.aMatAlloy, 2, RefStrings.MODID + ":textures/armor/alloy_2.png").cloneStats((ArmorFSB) alloy_helmet).setUnlocalizedName("alloy_legs").setTextureName(RefStrings.MODID + ":alloy_legs");
 		alloy_boots = new ArmorFSB(MainRegistry.aMatAlloy, 3, RefStrings.MODID + ":textures/armor/alloy_1.png").cloneStats((ArmorFSB) alloy_helmet).setUnlocalizedName("alloy_boots").setTextureName(RefStrings.MODID + ":alloy_boots");
@@ -4781,13 +4781,13 @@ public class ModItems {
 
 		ArmorMaterial aMatT45 = EnumHelper.addArmorMaterial("HBM_T45", 150, new int[] { 3, 8, 6, 3 }, 0);
 		aMatT45.customCraftingMaterial = ModItems.plate_armor_titanium;
-		t45_helmet = new ArmorT45(aMatT45, 0, 1000000, 10000, 1000, 5).setCap(10F).setMod(0.5F)
+		t45_helmet = new ArmorT45(aMatT45, 0, 1000000, 10000, 1000, 5).setCap(100F).setMod(1F)
 				.setFireproof(true)
 				.enableVATS(true)
 				.setHasGeigerSound(true)
 				.setHasHardLanding(true)
-				.addEffect(new PotionEffect(Potion.damageBoost.id, 20, 0))
-				.setBlastProtection(0.5F)
+				.addEffect(new PotionEffect(Potion.moveSpeed.id, 20, 0))
+				.setBlastProtection(0.75F)
 				.addResistance("monoxide", 0F)
 				.addResistance("fall", 0)
 				.hides(EnumPlayerPart.HAT)
@@ -4798,7 +4798,7 @@ public class ModItems {
 
 		ArmorMaterial aMatDesh = EnumHelper.addArmorMaterial("HBM_DESH", 150, new int[] { 3, 8, 6, 3 }, 0);
 		aMatDesh.customCraftingMaterial = ModItems.ingot_desh;
-		steamsuit_helmet = new ArmorDesh(aMatDesh, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", Fluids.STEAM, 64_000, 500, 50, 1).setThreshold(5F).setMod(0.8F)
+		steamsuit_helmet = new ArmorDesh(aMatDesh, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", Fluids.STEAM, 64_000, 500, 50, 1).setThreshold(4F).setMod(0.8F)
 				.setFireproof(true)
 				.setHasHardLanding(true)
 				.addEffect(new PotionEffect(Potion.digSpeed.id, 20, 4))
@@ -4826,14 +4826,14 @@ public class ModItems {
 		
 		ArmorMaterial aMatAJR = EnumHelper.addArmorMaterial("HBM_T45AJR", 150, new int[] { 3, 8, 6, 3 }, 100);
 		aMatAJR.customCraftingMaterial = ModItems.plate_armor_ajr;
-		ajr_helmet = new ArmorAJR(aMatAJR, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 2500000, 10000, 2000, 25).setMod(0.25F).setCap(6.0F).setThreshold(4F)
+		ajr_helmet = new ArmorAJR(aMatAJR, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 2500000, 10000, 2000, 25).setMod(0.7F).setCap(15F).setThreshold(4F)
 				.setFireproof(true)
 				.enableVATS(true)
 				.setHasGeigerSound(true)
 				.setHasHardLanding(true)
 				.addEffect(new PotionEffect(Potion.jump.id, 20, 0))
 				.addEffect(new PotionEffect(Potion.damageBoost.id, 20, 0))
-				.setBlastProtection(0.25F)
+				.setBlastProtection(0.5F)
 				.setStep("hbm:step.metal")
 				.setJump("hbm:step.iron_jump")
 				.setFall("hbm:step.iron_land")
@@ -4845,14 +4845,14 @@ public class ModItems {
 		ajr_legs = new ArmorAJR(aMatAJR, 2, RefStrings.MODID + ":textures/armor/starmetal_2.png", 2500000, 10000, 2000, 25).cloneStats((ArmorFSB) ajr_helmet).setUnlocalizedName("ajr_legs").setTextureName(RefStrings.MODID + ":ajr_legs");
 		ajr_boots = new ArmorAJR(aMatAJR, 3, RefStrings.MODID + ":textures/armor/starmetal_1.png", 2500000, 10000, 2000, 25).cloneStats((ArmorFSB) ajr_helmet).setUnlocalizedName("ajr_boots").setTextureName(RefStrings.MODID + ":ajr_boots");
 		
-		ajro_helmet = new ArmorAJRO(aMatAJR, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 2500000, 10000, 2000, 25).setMod(0.25F).setCap(6.0F).setThreshold(4F)
+		ajro_helmet = new ArmorAJRO(aMatAJR, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 2500000, 10000, 2000, 25).setMod(0.7F).setCap(15F).setThreshold(4F)
 				.setFireproof(true)
 				.enableVATS(true)
 				.setHasGeigerSound(true)
 				.setHasHardLanding(true)
 				.addEffect(new PotionEffect(Potion.jump.id, 20, 0))
 				.addEffect(new PotionEffect(Potion.damageBoost.id, 20, 0))
-				.setBlastProtection(0.25F)
+				.setBlastProtection(0.5F)
 				.setStep("hbm:step.metal")
 				.setJump("hbm:step.iron_jump")
 				.setFall("hbm:step.iron_land")
@@ -4864,14 +4864,14 @@ public class ModItems {
 		ajro_legs = new ArmorAJRO(aMatAJR, 2, RefStrings.MODID + ":textures/armor/starmetal_2.png", 2500000, 10000, 2000, 25).cloneStats((ArmorFSB) ajro_helmet).setUnlocalizedName("ajro_legs").setTextureName(RefStrings.MODID + ":ajro_legs");
 		ajro_boots = new ArmorAJRO(aMatAJR, 3, RefStrings.MODID + ":textures/armor/starmetal_1.png", 2500000, 10000, 2000, 25).cloneStats((ArmorFSB) ajro_helmet).setUnlocalizedName("ajro_boots").setTextureName(RefStrings.MODID + ":ajro_boots");
 		
-		rpa_helmet = new ArmorRPA(aMatAJR, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 2500000, 10000, 2000, 25).setMod(0.1F).setCap(6.0F).setThreshold(20F)
+		rpa_helmet = new ArmorRPA(aMatAJR, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 2500000, 10000, 2000, 25).setMod(0.4F).setCap(10F).setThreshold(10F)
 				.setFireproof(true)
 				.enableVATS(true)
 				.setHasGeigerSound(true)
 				.setHasHardLanding(true)
 				.addEffect(new PotionEffect(Potion.damageBoost.id, 20, 3))
-				.setBlastProtection(0.25F)
-				.setProjectileProtection(0.25F)
+				.setBlastProtection(0.35F)
+				.setProjectileProtection(0.45F)
 				.setProtectionLevel(1500)
 				.setStep("hbm:step.powered")
 				.setJump("hbm:step.powered")
@@ -4885,7 +4885,7 @@ public class ModItems {
 		
 		ArmorMaterial aMatBJ = EnumHelper.addArmorMaterial("HBM_BLACKJACK", 150, new int[] { 3, 8, 6, 3 }, 100);
 		aMatBJ.customCraftingMaterial = ModItems.plate_armor_lunar;
-		bj_helmet = new ArmorBJ(aMatBJ, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 10000000, 10000, 1000, 100).setMod(0.25F).setCap(4.0F).setThreshold(4F)
+		bj_helmet = new ArmorBJ(aMatBJ, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 10000000, 10000, 1000, 100).setMod(0.5F).setCap(4.0F).setThreshold(10F)
 				.setFireproof(true)
 				.enableVATS(true)
 				.enableThermalSight(true)
@@ -4908,7 +4908,7 @@ public class ModItems {
 
 		ArmorMaterial aMatEnv = EnumHelper.addArmorMaterial("HBM_ENV", 150, new int[] { 3, 8, 6, 3 }, 100);
 		aMatEnv.customCraftingMaterial = ModItems.plate_armor_hev;
-		envsuit_helmet = new ArmorEnvsuit(aMatEnv, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 100_000, 1_000, 250, 0).setMod(0.5F).setThreshold(2.0F)
+		envsuit_helmet = new ArmorEnvsuit(aMatEnv, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 100_000, 1_000, 250, 0).setMod(0.8F).setThreshold(1F)
 				.addEffect(new PotionEffect(Potion.moveSpeed.id, 20, 1))
 				.addEffect(new PotionEffect(Potion.jump.id, 20, 0))
 				.addResistance("fall", 0.25F)
@@ -4922,7 +4922,7 @@ public class ModItems {
 		
 		ArmorMaterial aMatHEV = EnumHelper.addArmorMaterial("HBM_HEV", 150, new int[] { 3, 8, 6, 3 }, 100);
 		aMatHEV.customCraftingMaterial = ModItems.plate_armor_hev;
-		hev_helmet = new ArmorHEV(aMatHEV, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 1000000, 10000, 2500, 0).setMod(0.20F).setCap(4.0F).setThreshold(2.0F)
+		hev_helmet = new ArmorHEV(aMatHEV, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 1000000, 10000, 2500, 0).setMod(0.5F).setCap(10F).setThreshold(2.0F)
 				.addEffect(new PotionEffect(Potion.moveSpeed.id, 20, 1))
 				.addEffect(new PotionEffect(Potion.jump.id, 20, 0))
 				.setBlastProtection(0.25F)
@@ -4943,10 +4943,10 @@ public class ModItems {
 
 		ArmorMaterial aMatFau = EnumHelper.addArmorMaterial("HBM_DIGAMMA", 150, new int[] { 3, 8, 6, 3 }, 100);
 		aMatFau.customCraftingMaterial = ModItems.plate_armor_fau;
-		fau_helmet = new ArmorDigamma(aMatFau, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 10000000, 10000, 2500, 0).setMod(0.25F).setCap(4.0F).setThreshold(2.0F)
+		fau_helmet = new ArmorDigamma(aMatFau, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png", 10000000, 10000, 2500, 0).setMod(0.25F).setCap(8F).setThreshold(2.0F)
 				.addEffect(new PotionEffect(Potion.jump.id, 20, 1))
-				.setBlastProtection(0.05F)
-				.setMod(0.05F)
+				.setBlastProtection(0.2F)
+				.setMod(0.35F)
 				.setHasGeigerSound(true)
 				.enableThermalSight(true)
 				.setHasHardLanding(true)
@@ -4985,7 +4985,7 @@ public class ModItems {
 
 		ArmorMaterial aMatTrench = EnumHelper.addArmorMaterial("HBM_TRENCH", 150, new int[] { 3, 8, 6, 3 }, 100);
 		aMatTrench.customCraftingMaterial = ModItems.plate_iron;
-		trenchmaster_helmet = new ArmorTrenchmaster(aMatTrench, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png").setMod(0.125F).setThreshold(5.0F)
+		trenchmaster_helmet = new ArmorTrenchmaster(aMatTrench, 0, RefStrings.MODID + ":textures/armor/starmetal_1.png").setMod(0.45F).setThreshold(5.0F)
 				.addEffect(new PotionEffect(Potion.damageBoost.id, 20, 2))
 				.addEffect(new PotionEffect(Potion.digSpeed.id, 20, 1))
 				.addEffect(new PotionEffect(Potion.jump.id, 20, 1))
