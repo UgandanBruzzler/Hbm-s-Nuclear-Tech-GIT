@@ -27,7 +27,7 @@ public class Gun5mmFactory {
 		GunConfiguration config = new GunConfiguration();
 		
 		config.rateOfFire = 1;
-		config.roundsPerCycle = 5;
+		config.roundsPerCycle = 1;
 		config.gunMode = GunConfiguration.MODE_NORMAL;
 		config.firingMode = GunConfiguration.FIRE_AUTO;
 		config.reloadDuration = 20;
@@ -87,8 +87,8 @@ public class Gun5mmFactory {
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_5mm.stackFromEnum(Ammo5mm.STOCK));
 		bullet.spread *= inaccuracy;
-		bullet.dmgMin = 12;
-		bullet.dmgMax = 14;
+		bullet.dmgMin = 2;
+		bullet.dmgMax = 3;
 		
 		bullet.spentCasing = CASING5MM.clone().register("5mmStock");
 		
@@ -101,8 +101,8 @@ public class Gun5mmFactory {
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_5mm.stackFromEnum(Ammo5mm.EXPLOSIVE));
 		bullet.spread *= inaccuracy;
-		bullet.dmgMin = 30;
-		bullet.dmgMax = 32;
+		bullet.dmgMin = 3;
+		bullet.dmgMax = 5;
 		bullet.explosive = 1F;
 		bullet.wear = 25;
 		
@@ -117,8 +117,8 @@ public class Gun5mmFactory {
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_5mm.stackFromEnum(Ammo5mm.DU));
 		bullet.spread *= inaccuracy;
-		bullet.dmgMin = 36;
-		bullet.dmgMax = 40;
+		bullet.dmgMin = 4;
+		bullet.dmgMax = 6;
 		bullet.wear = 25;
 		bullet.leadChance = 50;
 		
@@ -133,8 +133,8 @@ public class Gun5mmFactory {
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_5mm.stackFromEnum(Ammo5mm.STAR));
 		bullet.spread *= inaccuracy;
-		bullet.dmgMin = 46;
-		bullet.dmgMax = 50;
+		bullet.dmgMin = 5;
+		bullet.dmgMax = 7;
 		bullet.wear = 25;
 		bullet.leadChance = 100;
 		
