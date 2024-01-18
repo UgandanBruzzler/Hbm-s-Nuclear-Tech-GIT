@@ -58,7 +58,7 @@ public class GunDefabricator extends Item {
 		if ((player.capabilities.isCreativeMode || player.inventory.hasItem(ModItems.gun_defabricator_ammo))
 				&& count % 2 == 0) {
 			EntityBullet entitybullet = new EntityBullet(world, player, 3.0F, 40, 120, false, "tauDay");
-			entitybullet.setDamage(40 + rand.nextInt(120 - 40));
+			entitybullet.setDamage(2 + rand.nextInt(25 - 2));
 
 			//world.playSoundAtEntity(player, "random.explode", 1.0F, 1.5F + (rand.nextFloat() / 4));
 			world.playSoundAtEntity(player, "hbm:weapon.defabShoot", 1.0F, 0.9F + (rand.nextFloat() * 0.2F));
@@ -88,7 +88,7 @@ public class GunDefabricator extends Item {
 			list.add("BAD WOLF");
 		list.add("");
 		list.add("Ammo: Defabricator Energy Cell");
-		list.add("Damage: 40 - 120");
+		list.add("Damage: 2 - 25");
 		list.add("");
 		list.add("[LEGENDARY WEAPON]");
 	}
