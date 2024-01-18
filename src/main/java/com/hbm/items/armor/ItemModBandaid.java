@@ -18,7 +18,7 @@ public class ItemModBandaid extends ItemArmorMod {
 	@Override
 	public void addInformation(ItemStack itemstack, EntityPlayer player, List list, boolean bool) {
 
-		list.add(EnumChatFormatting.RED + "3% chance for full heal when damaged");
+		list.add(EnumChatFormatting.RED + "1.5% chance for full heal when damaged");
 		list.add("");
 		super.addInformation(itemstack, player, list, bool);
 	}
@@ -31,7 +31,7 @@ public class ItemModBandaid extends ItemArmorMod {
 	@Override
 	public void modDamage(LivingHurtEvent event, ItemStack armor) {
 		
-		if(event.entity.worldObj.rand.nextInt(100) < 3) {
+		if(event.entity.worldObj.rand.nextInt(1000) < 15) {
 			event.ammount = 0;
 			event.entityLiving.heal(event.entityLiving.getMaxHealth());
 		}
