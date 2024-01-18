@@ -53,8 +53,8 @@ public class Gun50BMGFactory {
 
 		bullet.ammo = new ComparableStack(ModItems.ammo_luna_sniper.stackFromEnum(AmmoLunaticSniper.SABOT));
 		bullet.spread = 0.0F;
-		bullet.dmgMax = 500F;
-		bullet.dmgMin = 450F;
+		bullet.dmgMax = 22F;
+		bullet.dmgMin = 16F;
 		bullet.headshotMult = 2.5F;
 		bullet.wear = 2000;
 		bullet.velocity = 10F;
