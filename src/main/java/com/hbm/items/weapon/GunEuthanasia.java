@@ -57,7 +57,7 @@ public class GunEuthanasia extends Item {
 		if ((player.capabilities.isCreativeMode || player.inventory.hasItem(ModItems.gun_euthanasia_ammo))
 				&& count % 8 == 0) {
 			
-			int deadly = rand.nextInt(5);
+			int deadly = rand.nextInt(200);
 			
 			EntityBullet entityarrow = new EntityBullet(world, player, 3.0F, 2, 8, deadly == 0, false);
 			entityarrow.setDamage(1 + rand.nextInt(3));
@@ -90,7 +90,7 @@ public class GunEuthanasia extends Item {
 		list.add("");
 		list.add("Ammo: Syringe");
 		list.add("Damage: 1 - 4");
-		list.add("Syringes have a 20% chance to instakill the enemy.");
+		list.add("Syringes have a 0.5% chance to instakill the enemy.");
 		list.add("");
 		list.add("[LEGENDARY WEAPON]");
 	}
