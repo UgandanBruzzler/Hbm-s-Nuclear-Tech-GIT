@@ -163,7 +163,7 @@ public class Gun45ACPFactory {
 
 		bullet.ammo = new ComparableStack(ModItems.ammo_45.stackFromEnum(Ammo45ACP.DU));
 		bullet.dmgMax = 6;
-		bullet.dmgMin = 3;
+		bullet.dmgMin = 5;
 		bullet.wear = 25;
 		bullet.leadChance = 50;
 		
