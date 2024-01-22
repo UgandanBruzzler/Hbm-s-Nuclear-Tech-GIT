@@ -73,8 +73,8 @@ public class Gun22LRFactory {
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_22lr.stackFromEnum(Ammo22LR.STOCK));
 		bullet.spread *= inaccuracy;
-		bullet.dmgMin = 6;
-		bullet.dmgMax = 8;
+		bullet.dmgMin = 1;
+		bullet.dmgMax = 2;
 		
 		bullet.spentCasing = CASING22LR.clone().register("22LRStock");
 		
@@ -87,8 +87,8 @@ public class Gun22LRFactory {
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_22lr.stackFromEnum(Ammo22LR.AP));
 		bullet.spread *= inaccuracy;
-		bullet.dmgMin = 12;
-		bullet.dmgMax = 16;
+		bullet.dmgMin = 2;
+		bullet.dmgMax = 3;
 		bullet.leadChance = 10;
 		bullet.wear = 15;
 		
