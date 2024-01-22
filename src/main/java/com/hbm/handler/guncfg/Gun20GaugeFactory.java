@@ -113,8 +113,8 @@ public class Gun20GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBuckshotConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_20gauge.stackFromEnum(Ammo20Gauge.STOCK));
-		bullet.dmgMin = 3;
-		bullet.dmgMax = 5;
+		bullet.dmgMin = 1;
+		bullet.dmgMax = 2;
 		
 		bullet.spentCasing = CASING20GAUGE.clone().register("20GaStock").setColor(0xB52B2B, SpentCasing.COLOR_CASE_BRASS);
 		
@@ -126,8 +126,8 @@ public class Gun20GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBulletConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_20gauge.stackFromEnum(Ammo20Gauge.SLUG));
-		bullet.dmgMin = 18;
-		bullet.dmgMax = 22;
+		bullet.dmgMin = 8;
+		bullet.dmgMax = 10;
 		bullet.wear = 7;
 		bullet.style = BulletConfiguration.STYLE_NORMAL;
 		
@@ -141,8 +141,8 @@ public class Gun20GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBuckshotConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_20gauge.stackFromEnum(Ammo20Gauge.FLECHETTE));
-		bullet.dmgMin = 8;
-		bullet.dmgMax = 15;
+		bullet.dmgMin = 3;
+		bullet.dmgMax = 5;
 		bullet.wear = 15;
 		bullet.style = BulletConfiguration.STYLE_FLECHETTE;
 		bullet.HBRC = 2;
@@ -159,8 +159,8 @@ public class Gun20GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBuckshotConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_20gauge.stackFromEnum(Ammo20Gauge.INCENDIARY));
-		bullet.dmgMin = 3;
-		bullet.dmgMax = 6;
+		bullet.dmgMin = 1;
+		bullet.dmgMax = 2;
 		bullet.wear = 15;
 		bullet.incendiary = 5;
 		
@@ -175,8 +175,8 @@ public class Gun20GaugeFactory {
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_20gauge.stackFromEnum(Ammo20Gauge.SHRAPNEL));
 		bullet.wear = 15;
-		bullet.dmgMin = 7;
-		bullet.dmgMax = 12;
+		bullet.dmgMin = 3;
+		bullet.dmgMax = 4;
 		bullet.ricochetAngle = 15;
 		bullet.HBRC = 80;
 		bullet.LBRC = 95;
@@ -191,8 +191,8 @@ public class Gun20GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBuckshotConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_20gauge.stackFromEnum(Ammo20Gauge.EXPLOSIVE));
-		bullet.dmgMin = 7;
-		bullet.dmgMax = 12;
+		bullet.dmgMin = 1;
+		bullet.dmgMax = 2;
 		bullet.wear = 25;
 		bullet.explosive = 0.5F;
 		
@@ -206,8 +206,8 @@ public class Gun20GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBuckshotConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_20gauge.stackFromEnum(Ammo20Gauge.CAUSTIC));
-		bullet.dmgMin = 3;
-		bullet.dmgMax = 7;
+		bullet.dmgMin = 1;
+		bullet.dmgMax = 2;
 		bullet.wear = 25;
 		bullet.caustic = 5;
 		bullet.doesRicochet = false;
@@ -227,8 +227,8 @@ public class Gun20GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBuckshotConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_20gauge.stackFromEnum(Ammo20Gauge.SHOCK));
-		bullet.dmgMin = 4;
-		bullet.dmgMax = 8;
+		bullet.dmgMin = 1;
+		bullet.dmgMax = 2;
 		bullet.wear = 25;
 		bullet.emp = 2;
 		bullet.doesRicochet = false;
@@ -249,8 +249,8 @@ public class Gun20GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBuckshotConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_20gauge.stackFromEnum(Ammo20Gauge.WITHER));
-		bullet.dmgMin = 4;
-		bullet.dmgMax = 8;
+		bullet.dmgMin = 1;
+		bullet.dmgMax = 2;
 		
 		bullet.effects = new ArrayList();
 		bullet.effects.add(new PotionEffect(Potion.wither.id, 10 * 20, 2));
