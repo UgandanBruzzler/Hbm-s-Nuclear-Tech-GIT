@@ -98,8 +98,8 @@ public class Gun9mmFactory {
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_9mm.stackFromEnum(Ammo9mm.STOCK));
 		bullet.spread *= inaccuracy;
-		bullet.dmgMin = 10;
-		bullet.dmgMax = 14;
+		bullet.dmgMin = 2;
+		bullet.dmgMax = 3;
 		
 		bullet.spentCasing = CASING9MM.clone().register("9MMStock");
 		
@@ -112,8 +112,8 @@ public class Gun9mmFactory {
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_9mm.stackFromEnum(Ammo9mm.AP));
 		bullet.spread *= inaccuracy;
-		bullet.dmgMin = 18;
-		bullet.dmgMax = 20;
+		bullet.dmgMin = 3;
+		bullet.dmgMax = 4;
 		bullet.leadChance = 10;
 		bullet.wear = 15;
 		
@@ -128,8 +128,8 @@ public class Gun9mmFactory {
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_9mm.stackFromEnum(Ammo9mm.DU));
 		bullet.spread *= inaccuracy;
-		bullet.dmgMin = 22;
-		bullet.dmgMax = 26;
+		bullet.dmgMin = 4;
+		bullet.dmgMax = 5;
 		bullet.leadChance = 50;
 		bullet.wear = 25;
 		
