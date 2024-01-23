@@ -141,8 +141,8 @@ public class Gun4GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBuckshotConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_4gauge.stackFromEnum(Ammo4Gauge.STOCK));
-		bullet.dmgMin = 5;
-		bullet.dmgMax = 8;
+		bullet.dmgMin = 1;
+		bullet.dmgMax = 2;
 		bullet.bulletsMin *= 2;
 		bullet.bulletsMax *= 2;
 		
@@ -156,8 +156,8 @@ public class Gun4GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBulletConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_4gauge.stackFromEnum(Ammo4Gauge.SLUG));
-		bullet.dmgMin = 25;
-		bullet.dmgMax = 32;
+		bullet.dmgMin = 10;
+		bullet.dmgMax = 12;
 		bullet.wear = 7;
 		bullet.style = BulletConfiguration.STYLE_NORMAL;
 		
@@ -171,8 +171,8 @@ public class Gun4GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBuckshotConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_4gauge.stackFromEnum(Ammo4Gauge.FLECHETTE));
-		bullet.dmgMin = 8;
-		bullet.dmgMax = 15;
+		bullet.dmgMin = 4;
+		bullet.dmgMax = 6;
 		bullet.bulletsMin *= 2;
 		bullet.bulletsMax *= 2;
 		bullet.wear = 15;
@@ -191,8 +191,8 @@ public class Gun4GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBuckshotConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_4gauge.stackFromEnum(Ammo4Gauge.FLECHETTE_PHOSPHORUS));
-		bullet.dmgMin = 8;
-		bullet.dmgMax = 15;
+		bullet.dmgMin = 4;
+		bullet.dmgMax = 6;
 		bullet.bulletsMin *= 2;
 		bullet.bulletsMax *= 2;
 		bullet.wear = 15;
@@ -229,8 +229,8 @@ public class Gun4GaugeFactory {
 		bullet.ammo = new ComparableStack(ModItems.ammo_4gauge.stackFromEnum(Ammo4Gauge.EXPLOSIVE));
 		bullet.velocity *= 2;
 		bullet.gravity *= 2;
-		bullet.dmgMin = 20;
-		bullet.dmgMax = 25;
+		bullet.dmgMin = 3;
+		bullet.dmgMax = 4;
 		bullet.wear = 25;
 		bullet.trail = 1;
 		
@@ -246,8 +246,8 @@ public class Gun4GaugeFactory {
 		bullet.ammo = new ComparableStack(ModItems.ammo_4gauge.stackFromEnum(Ammo4Gauge.MINING));
 		bullet.velocity *= 2;
 		bullet.gravity *= 2;
-		bullet.dmgMin = 10;
-		bullet.dmgMax = 15;
+		bullet.dmgMin = 3;
+		bullet.dmgMax = 4;
 		bullet.wear = 25;
 		bullet.trail = 1;
 		bullet.explosive = 0.0F;
@@ -278,8 +278,8 @@ public class Gun4GaugeFactory {
 		bullet.ammo = new ComparableStack(ModItems.ammo_4gauge.stackFromEnum(Ammo4Gauge.BALEFIRE));
 		bullet.velocity *= 2;
 		bullet.gravity *= 2;
-		bullet.dmgMin = 50;
-		bullet.dmgMax = 65;
+		bullet.dmgMin = 15;
+		bullet.dmgMax = 22;
 		bullet.wear = 25;
 		bullet.trail = 1;
 		bullet.explosive = 0.0F;
@@ -373,8 +373,8 @@ public class Gun4GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBuckshotConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_4gauge.stackFromEnum(Ammo4Gauge.CLAW));
-		bullet.dmgMin = 6;
-		bullet.dmgMax = 9;
+		bullet.dmgMin = 2;
+		bullet.dmgMax = 3;
 		bullet.bulletsMin *= 2;
 		bullet.bulletsMax *= 2;
 		bullet.leadChance = 100;
@@ -408,8 +408,8 @@ public class Gun4GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBuckshotConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_4gauge.stackFromEnum(Ammo4Gauge.VAMPIRE));
-		bullet.dmgMin = 6;
-		bullet.dmgMax = 9;
+		bullet.dmgMin = 2;
+		bullet.dmgMax = 3;
 		bullet.bulletsMin *= 2;
 		bullet.bulletsMax *= 2;
 		bullet.leadChance = 100;
@@ -444,24 +444,11 @@ public class Gun4GaugeFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardBuckshotConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_4gauge.stackFromEnum(Ammo4Gauge.VOID));
-		bullet.dmgMin = 6;
-		bullet.dmgMax = 9;
+		bullet.dmgMin = 2;
+		bullet.dmgMax = 3;
 		bullet.bulletsMin *= 2;
 		bullet.bulletsMax *= 2;
 		bullet.leadChance = 0;
-		
-		bullet.bntHurt = (bulletnt, hit) -> {
-				
-			if(bulletnt.worldObj.isRemote)
-				return;
-
-			if(hit instanceof EntityPlayer) {
-				EntityPlayer player = (EntityPlayer) hit;
-
-				player.inventory.dropAllItems();
-				player.worldObj.newExplosion(bulletnt.getThrower(), player.posX, player.posY, player.posZ, 5.0F, true, true);
-			}
-		};
 		
 		bullet.spentCasing = CASING4GAUGE.clone().register("4GaVoid").setColor(0x3F3F3F, SpentCasing.COLOR_CASE_4GA);
 		
