@@ -169,8 +169,8 @@ public class Gun44MagnumFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardPistolConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_44.stackFromEnum(Ammo44Magnum.STOCK));
-		bullet.dmgMin = 18;
-		bullet.dmgMax = 26;
+		bullet.dmgMin = 3;
+		bullet.dmgMax = 4;
 		
 		bullet.spentCasing = CASING44.clone().register("44NoPip");
 		
@@ -182,8 +182,8 @@ public class Gun44MagnumFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardPistolConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_44.stackFromEnum(Ammo44Magnum.AP));
-		bullet.dmgMin = 25;
-		bullet.dmgMax = 32;
+		bullet.dmgMin = 4;
+		bullet.dmgMax = 5;
 		bullet.wear = 15;
 		bullet.leadChance = 10;
 		
@@ -212,8 +212,8 @@ public class Gun44MagnumFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardPistolConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_44.stackFromEnum(Ammo44Magnum.PHOSPHORUS));
-		bullet.dmgMin = 18;
-		bullet.dmgMax = 26;
+		bullet.dmgMin = 3;
+		bullet.dmgMax = 4;
 		bullet.wear = 15;
 		bullet.incendiary = 5;
 		bullet.doesPenetrate = false;
@@ -244,8 +244,8 @@ public class Gun44MagnumFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardPistolConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_44.stackFromEnum(Ammo44Magnum.STAR));
-		bullet.dmgMin = 42;
-		bullet.dmgMax = 50;
+		bullet.dmgMin = 6;
+		bullet.dmgMax = 7;
 		bullet.wear = 25;
 		bullet.leadChance = 100;
 		
@@ -259,8 +259,8 @@ public class Gun44MagnumFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardPistolConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_44.stackFromEnum(Ammo44Magnum.PIP));
-		bullet.dmgMin = 30;
-		bullet.dmgMax = 36;
+		bullet.dmgMin = 5;
+		bullet.dmgMax = 6;
 		bullet.wear = 25;
 		bullet.doesPenetrate = false;
 		
@@ -292,8 +292,8 @@ public class Gun44MagnumFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardPistolConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_44.stackFromEnum(Ammo44Magnum.BJ));
-		bullet.dmgMin = 30;
-		bullet.dmgMax = 36;
+		bullet.dmgMin = 5;
+		bullet.dmgMax = 6;
 		bullet.wear = 25;
 		bullet.doesPenetrate = false;
 		
@@ -325,8 +325,8 @@ public class Gun44MagnumFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardPistolConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_44.stackFromEnum(Ammo44Magnum.SILVER));
-		bullet.dmgMin = 30;
-		bullet.dmgMax = 36;
+		bullet.dmgMin = 5;
+		bullet.dmgMax = 6;
 		bullet.wear = 25;
 		bullet.doesPenetrate = false;
 		
