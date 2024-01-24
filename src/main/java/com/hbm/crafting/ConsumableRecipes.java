@@ -104,12 +104,12 @@ public class ConsumableRecipes {
 		CraftingManager.addRecipeAuto(new ItemStack(ModItems.syringe_awesome, 1), new Object[] { "SNS", "ICI", "SNS", 'C', ModItems.syringe_empty, 'S', S.dust(), 'N', ModItems.nugget_euphemium, 'I', ModItems.ingot_euphemium });
 		CraftingManager.addRecipeAuto(new ItemStack(ModItems.syringe_awesome, 1), new Object[] { "SIS", "NCN", "SIS", 'C', ModItems.syringe_empty, 'S', S.dust(), 'N', ModItems.nugget_euphemium, 'I', ModItems.ingot_euphemium });
 		CraftingManager.addRecipeAuto(new ItemStack(ModItems.syringe_metal_empty, 6), new Object[] { "P", "C", "B", 'B', Blocks.iron_bars, 'C', ModItems.rod_empty, 'P', IRON.plate() });
-		CraftingManager.addRecipeAuto(new ItemStack(ModItems.syringe_metal_stimpak, 1), new Object[] { " N ", "GSG", " N ", 'N', Items.nether_wart, 'S', ModItems.syringe_metal_empty, 'G', Items.golden_apple });
+		CraftingManager.addRecipeAuto(new ItemStack(ModItems.syringe_metal_stimpak, 1), new Object[] { " N ", "GSG", " N ", 'N', Items.nether_wart, 'S', ModItems.syringe_metal_empty, 'G', ModItems.nugget_au198 });
 		CraftingManager.addShapelessAuto(new ItemStack(ModItems.syringe_metal_stimpak, 1), new Object[] { ModItems.nitra_small, ModItems.nitra_small, ModItems.nitra_small, ModItems.syringe_metal_empty });
 		CraftingManager.addRecipeAuto(new ItemStack(ModItems.syringe_metal_medx, 1), new Object[] { " C ", " S ", " C ", 'C', ModItems.ingot_chainsteel, 'S', ModItems.syringe_metal_empty });
 		CraftingManager.addRecipeAuto(new ItemStack(ModItems.syringe_metal_psycho, 1), new Object[] { " B ", "MSM", "   ", 'M', ModItems.ingot_meteorite, 'S', ModItems.syringe_metal_empty, 'B', ModItems.blade_meteorite });
-		CraftingManager.addRecipeAuto(new ItemStack(ModItems.syringe_metal_super, 1), new Object[] { " G ", "PSP", "L L", 'G', Items.enchanted_golden_apple, 'P', STEEL.plate(), 'S', ModItems.syringe_metal_stimpak, 'L', Items.leather });
-		CraftingManager.addRecipeAuto(new ItemStack(ModItems.syringe_metal_super, 1), new Object[] { " G ", "PSP", "L L", 'G', Items.enchanted_golden_apple, 'P', STEEL.plate(), 'S', ModItems.syringe_metal_stimpak, 'L', ANY_RUBBER.ingot() });
+		CraftingManager.addRecipeAuto(new ItemStack(ModItems.syringe_metal_super, 1), new Object[] { " G ", "PSP", "L L", 'G', ModItems.ingot_au198, 'P', STEEL.plate(), 'S', ModItems.syringe_metal_stimpak, 'L', Items.leather });
+		CraftingManager.addRecipeAuto(new ItemStack(ModItems.syringe_metal_super, 1), new Object[] { " G ", "PSP", "L L", 'G', ModItems.ingot_au198, 'P', STEEL.plate(), 'S', ModItems.syringe_metal_stimpak, 'L', ANY_RUBBER.ingot() });
 		CraftingManager.addShapelessAuto(new ItemStack(ModItems.syringe_taint), new Object[] { ModItems.bottle2_empty, ModItems.syringe_metal_empty, ModItems.ducttape, ModItems.powder_magic, ModItems.nugget_euphemium, Items.potionitem });
 		
 		//Medicine
