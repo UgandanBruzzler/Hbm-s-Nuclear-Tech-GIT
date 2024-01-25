@@ -213,8 +213,8 @@ public class Gun357MagnumFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardPistolConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_357.stackFromEnum(Ammo357Magnum.IRON));
-		bullet.dmgMin = 8;
-		bullet.dmgMax = 10;
+		bullet.dmgMin = 3;
+		bullet.dmgMax = 4;
 		
 		bullet.spentCasing = CASING357.clone().register("357Iron").setColor(0xA8A8A8);
 		
@@ -226,8 +226,8 @@ public class Gun357MagnumFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardPistolConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_357.stackFromEnum(Ammo357Magnum.LEAD));
-		bullet.dmgMin = 18;
-		bullet.dmgMax = 22;
+		bullet.dmgMin = 6;
+		bullet.dmgMax = 8;
 		
 		bullet.spentCasing = CASING357.clone().register("357Lead").setColor(0x646470);
 		
@@ -239,8 +239,8 @@ public class Gun357MagnumFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardPistolConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_357.stackFromEnum(Ammo357Magnum.NUCLEAR));
-		bullet.dmgMin = 10;
-		bullet.dmgMax = 15;
+		bullet.dmgMin = 6;
+		bullet.dmgMax = 8;
 		
 		bullet.effects = new ArrayList();
 		bullet.effects.add(new PotionEffect(HbmPotion.radiation.id, 10 * 20, 4));
@@ -255,8 +255,8 @@ public class Gun357MagnumFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardPistolConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_357.stackFromEnum(Ammo357Magnum.GOLD));
-		bullet.dmgMin = 25;
-		bullet.dmgMax = 28;
+		bullet.dmgMin = 7;
+		bullet.dmgMax = 10;
 		
 		bullet.spentCasing = CASING357.clone().register("357Gold").setColor(0xF9FF3E);
 		
@@ -268,8 +268,8 @@ public class Gun357MagnumFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardPistolConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_357.stackFromEnum(Ammo357Magnum.DESH));
-		bullet.dmgMin = 30;
-		bullet.dmgMax = 33;
+		bullet.dmgMin = 11;
+		bullet.dmgMax = 12;
 		
 		bullet.spentCasing = CASING357.clone().register("357Desh").setColor(0xF22929);
 		
@@ -295,8 +295,8 @@ public class Gun357MagnumFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardPistolConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_357.stackFromEnum(Ammo357Magnum.STEEL));
-		bullet.dmgMin = 18;
-		bullet.dmgMax = 25;
+		bullet.dmgMin = 6;
+		bullet.dmgMax = 9;
 		
 		bullet.spentCasing = CASING357.clone().register("357Cursed").setColor(0x565656);
 		
@@ -309,7 +309,7 @@ public class Gun357MagnumFactory {
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_357.stackFromEnum(Ammo357Magnum.NIGHTMARE1));
 		bullet.dmgMin = 1;
-		bullet.dmgMax = 33;
+		bullet.dmgMax = 15;
 		
 		bullet.spentCasing = CASING357.clone().register("357N1").setColor(0x3A3A3A);
 		
