@@ -26,7 +26,7 @@ public class EntityGrenadeSchrabidium extends EntityGrenadeBouncyBase {
 
 		if(!this.worldObj.isRemote) {
 			this.setDead();
-			ExplosionChaos.schrab(this.worldObj, (int) this.posX, (int) this.posY, (int) this.posZ, 50, 50);
+			ExplosionChaos.schrab(this.worldObj, (int) this.posX, (int) this.posY, (int) this.posZ, 10, 50);
 			this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, 1.5F, true);
 		}
 	}
