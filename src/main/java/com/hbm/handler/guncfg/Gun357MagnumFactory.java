@@ -281,8 +281,8 @@ public class Gun357MagnumFactory {
 		BulletConfiguration bullet = BulletConfigFactory.standardPistolConfig();
 		
 		bullet.ammo = new ComparableStack(ModItems.ammo_357.stackFromEnum(Ammo357Magnum.SCHRABIDIUM));
-		bullet.dmgMin = 10000;
-		bullet.dmgMax = 100000;
+		bullet.dmgMin = 5;
+		bullet.dmgMax = 50;
 		bullet.instakill = true;
 		
 		bullet.spentCasing = CASING357.clone().register("357Schrab").setColor(0x32FFFF);
