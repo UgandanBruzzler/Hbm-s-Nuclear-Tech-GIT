@@ -25,7 +25,7 @@ public class BombConfig {
 	public static int falloutRange = 150;
 	public static int fDelay = 4;
 	public static int limitExplosionLifespan = 0;
-	public static int rain = 6.000;
+	public static int rain = 6000;
 	public static int cont = 200;
 	public static boolean chunkloading = true;
 	
@@ -95,7 +95,7 @@ public class BombConfig {
 		falloutDelayProp.comment = "How many ticks to wait for the next fallout chunk computation";
 		fDelay = falloutDelayProp.getInt();
 
-		Property radRain = config.get(CATEGORY_NUKE, "6.05_falloutRainDuration", 6.000);
+		Property radRain = config.get(CATEGORY_NUKE, "6.05_falloutRainDuration", 6000);
 		radRain.comment = "Duration of the thunderstorm after fallout in ticks (only large explosions)";
 		rain = radRain.getInt();
 		Property rainCont = config.get(CATEGORY_NUKE, "6.06_falloutRainRadiation", 200);
