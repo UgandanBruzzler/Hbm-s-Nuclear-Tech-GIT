@@ -18,7 +18,7 @@ public class BombConfig {
 	public static int mirvRadius = 100;
 	public static int fatmanRadius = 35;
 	public static int nukaRadius = 25;
-	public static int aSchrabRadius = 20;
+	public static int aSchrabRadius = 10;
 
 	public static int mk5 = 50;
 	public static int blastSpeed = 1024;
