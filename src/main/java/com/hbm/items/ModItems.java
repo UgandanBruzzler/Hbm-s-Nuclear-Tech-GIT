@@ -2091,6 +2091,7 @@ public class ModItems {
 	public static Item chlorophyte_pickaxe;
 	public static Item mese_pickaxe;
 	public static Item dnt_sword;
+	public static Item dwarven_pickaxe;
 
 	public static Item meteorite_sword;
 	public static Item meteorite_sword_seared;
@@ -2346,6 +2347,7 @@ public class ModItems {
 
 	public static Item key;
 	public static Item key_red;
+	public static Item key_red_cracked;
 	public static Item key_kit;
 	public static Item key_fake;
 	public static Item pin;
@@ -4644,6 +4646,7 @@ public class ModItems {
 
 		key = new ItemKey().setUnlocalizedName("key").setMaxStackSize(1).setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":key");
 		key_red = new ItemCustomLore().setUnlocalizedName("key_red").setMaxStackSize(1).setCreativeTab(null).setTextureName(RefStrings.MODID + ":key_red");
+		key_red_cracked = new ItemCustomLore().setUnlocalizedName("key_red_cracked").setMaxStackSize(1).setCreativeTab(null).setTextureName(RefStrings.MODID + ":key_red_cracked");
 		key_kit = new ItemCounterfitKeys().setUnlocalizedName("key_kit").setMaxStackSize(1).setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":key_pair");
 		key_fake = new ItemKey().setUnlocalizedName("key_fake").setMaxStackSize(1).setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":key_gold");
 		pin = new ItemCustomLore().setUnlocalizedName("pin").setMaxStackSize(8).setCreativeTab(MainRegistry.consumableTab).setTextureName(RefStrings.MODID + ":pin");
@@ -5320,6 +5323,10 @@ public class ModItems {
 				.setDepthRockBreaker().setUnlocalizedName("mese_pickaxe").setTextureName(RefStrings.MODID + ":mese_pickaxe");
 		
 		dnt_sword = new ItemSwordAbility(12F, 0, matMese).setUnlocalizedName("dnt_sword").setTextureName(RefStrings.MODID + ":dnt_sword");
+
+		ToolMaterial matDwarf = EnumHelper.addToolMaterial("HBM_DWARVEN", 2, 0, 4F, 0.0F, 10).setRepairItem(new ItemStack(ModItems.ingot_copper));
+		dwarven_pickaxe = new ItemToolAbility(5F, -0.1, matDwarf, EnumToolType.MINER)
+				.addBreakAbility(new ToolAbility.HammerAbility(1)).setUnlocalizedName("dwarven_pickaxe").setMaxDamage(250).setTextureName(RefStrings.MODID + ":dwarven_pickaxe");
 
 		ToolMaterial matMeteorite = EnumHelper.addToolMaterial("HBM_METEORITE", 4, 0, 50F, 0.0F, 200).setRepairItem(new ItemStack(ModItems.plate_paa));
 		meteorite_sword = new ItemSwordMeteorite(8F, 0, matMeteorite).setUnlocalizedName("meteorite_sword").setTextureName(RefStrings.MODID + ":meteorite_sword");
@@ -6867,6 +6874,7 @@ public class ModItems {
 		//Keys and Locks
 		GameRegistry.registerItem(key, key.getUnlocalizedName());
 		GameRegistry.registerItem(key_red, key_red.getUnlocalizedName());
+		GameRegistry.registerItem(key_red_cracked, key_red_cracked.getUnlocalizedName());
 		GameRegistry.registerItem(key_kit, key_kit.getUnlocalizedName());
 		GameRegistry.registerItem(key_fake, key_fake.getUnlocalizedName());
 		GameRegistry.registerItem(mech_key, mech_key.getUnlocalizedName());
@@ -7466,6 +7474,7 @@ public class ModItems {
 		GameRegistry.registerItem(cape_hidden, cape_hidden.getUnlocalizedName());
 		
 		//Tools
+		GameRegistry.registerItem(dwarven_pickaxe, dwarven_pickaxe.getUnlocalizedName());
 		GameRegistry.registerItem(schrabidium_sword, schrabidium_sword.getUnlocalizedName());
 		GameRegistry.registerItem(schrabidium_hammer, schrabidium_hammer.getUnlocalizedName());
 		GameRegistry.registerItem(shimmer_sledge, shimmer_sledge.getUnlocalizedName());
