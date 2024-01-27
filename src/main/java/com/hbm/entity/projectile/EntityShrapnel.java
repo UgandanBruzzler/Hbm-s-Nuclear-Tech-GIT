@@ -42,7 +42,7 @@ public class EntityShrapnel extends EntityThrowable {
 	@Override
 	protected void onImpact(MovingObjectPosition mop) {
 		if(mop.entityHit != null) {
-			byte b0 = 15;
+			byte b0 = 5;
 
 			mop.entityHit.attackEntityFrom(ModDamageSource.shrapnel, b0);
 		}
