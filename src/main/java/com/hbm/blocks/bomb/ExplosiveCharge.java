@@ -73,7 +73,7 @@ public class ExplosiveCharge extends Block implements IBomb, IDetConnectible {
 				world.createExplosion(null, x + 0.5, y + 0.5, z + 0.5, 1.5F, true);
 			}
 			if(this == ModBlocks.det_charge) {
-				new ExplosionNT(world, null, x + 0.5, y + 0.5, z + 0.5, 10).overrideResolution(64).explode();
+				new ExplosionNT(world, null, x + 0.5, y + 0.5, z + 0.5, 15).overrideResolution(64).explode();
 				ExplosionLarge.spawnParticles(world, x, y, z, ExplosionLarge.cloudFunction(15));
 			}
 			if(this == ModBlocks.det_nuke) {
