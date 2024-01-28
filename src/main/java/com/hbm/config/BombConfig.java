@@ -9,7 +9,7 @@ public class BombConfig {
 	public static int boyRadius = 120;
 	public static int manRadius = 175;
 	public static int mikeRadius = 250;
-	public static int tsarRadius = 350;
+	public static int tsarRadius = 500;
 	public static int prototypeRadius = 150;
 	public static int fleijaRadius = 50;
 	public static int soliniumRadius = 150;
@@ -18,15 +18,15 @@ public class BombConfig {
 	public static int mirvRadius = 100;
 	public static int fatmanRadius = 35;
 	public static int nukaRadius = 25;
-	public static int aSchrabRadius = 10;
+	public static int aSchrabRadius = 20;
 
 	public static int mk5 = 50;
 	public static int blastSpeed = 1024;
-	public static int falloutRange = 150;
+	public static int falloutRange = 100;
 	public static int fDelay = 4;
 	public static int limitExplosionLifespan = 0;
-	public static int rain = 6000;
-	public static int cont = 200;
+	public static int rain = 0;
+	public static int cont = 0;
 	public static boolean chunkloading = true;
 	
 	public static void loadFromConfig(Configuration config) {
@@ -44,7 +44,7 @@ public class BombConfig {
 		Property propMike = config.get(CATEGORY_NUKES, "3.03_mikeRadius", 250);
 		propMike.comment = "Radius of Ivy Mike";
 		mikeRadius = propMike.getInt();
-		Property propTsar = config.get(CATEGORY_NUKES, "3.04_tsarRadius", 350);
+		Property propTsar = config.get(CATEGORY_NUKES, "3.04_tsarRadius", 500);
 		propTsar.comment = "Radius of the Tsar Bomba";
 		tsarRadius = propTsar.getInt();
 		Property propPrototype = config.get(CATEGORY_NUKES, "3.05_prototypeRadius", 150);
@@ -65,7 +65,7 @@ public class BombConfig {
 		Property propNuka = config.get(CATEGORY_NUKES, "3.10_nukaRadius", 25);
 		propNuka.comment = "Radius of the nuka grenade";
 		nukaRadius = propNuka.getInt();
-		Property propASchrab = config.get(CATEGORY_NUKES, "3.11_aSchrabRadius", 10);
+		Property propASchrab = config.get(CATEGORY_NUKES, "3.11_aSchrabRadius", 20);
 		propASchrab.comment = "Radius of dropped anti schrabidium";
 		aSchrabRadius = propASchrab.getInt();
 		Property propSolinium = config.get(CATEGORY_NUKES, "3.12_soliniumRadius", 150);
@@ -88,17 +88,17 @@ public class BombConfig {
 		propFalloutRange.comment = "Minimum amount of milliseconds per tick allocated for mk5 chunk processing";
 		mk5 = propFalloutRange.getInt();
 		// fallout range
-		Property falloutRangeProp = config.get(CATEGORY_NUKE, "6.03_falloutRange", 150);
+		Property falloutRangeProp = config.get(CATEGORY_NUKE, "6.03_falloutRange", 100);
 		falloutRangeProp.comment = "Radius of fallout area (base radius * value in percent)";
 		falloutRange = falloutRangeProp.getInt();
 		Property falloutDelayProp = config.get(CATEGORY_NUKE, "6.04_falloutDelay", 4);
 		falloutDelayProp.comment = "How many ticks to wait for the next fallout chunk computation";
 		fDelay = falloutDelayProp.getInt();
 
-		Property radRain = config.get(CATEGORY_NUKE, "6.05_falloutRainDuration", 6000);
+		Property radRain = config.get(CATEGORY_NUKE, "6.05_falloutRainDuration", 0);
 		radRain.comment = "Duration of the thunderstorm after fallout in ticks (only large explosions)";
 		rain = radRain.getInt();
-		Property rainCont = config.get(CATEGORY_NUKE, "6.06_falloutRainRadiation", 200);
+		Property rainCont = config.get(CATEGORY_NUKE, "6.06_falloutRainRadiation", 0);
 		rainCont.comment = "Radiation in 100th RADs created by fallout rain";
 		cont = rainCont.getInt();
 		
