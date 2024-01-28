@@ -22,7 +22,7 @@ public class BlockChargeSemtex extends BlockChargeBase {
 			world.setBlockToAir(x, y, z);
 			safe = false;
 			
-			ExplosionVNT xnt = new ExplosionVNT(world, x + 0.5, y + 0.5, z + 0.5, 6F);
+			ExplosionVNT xnt = new ExplosionVNT(world, x + 0.5, y + 0.5, z + 0.5, 10F);
 			xnt.setBlockAllocator(new BlockAllocatorStandard(32));
 			xnt.setBlockProcessor(new BlockProcessorStandard()
 					.setAllDrop()
