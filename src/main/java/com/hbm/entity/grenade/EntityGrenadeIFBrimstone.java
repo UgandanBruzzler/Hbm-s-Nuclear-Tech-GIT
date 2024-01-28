@@ -35,7 +35,7 @@ public class EntityGrenadeIFBrimstone extends EntityGrenadeBouncyBase {
 	    		EntityBullet fragment;
 	
 	    		fragment = new EntityBullet(worldObj, (EntityPlayer) this.thrower, 3.0F, 35, 45, false, "tauDay");
-	    		fragment.setDamage(rand.nextInt(16) + 5);
+	    		fragment.setDamage(rand.nextInt(301) + 100);
 	
 	    		fragment.motionX = rand.nextGaussian();
 	    		fragment.motionY = rand.nextGaussian();
@@ -62,11 +62,11 @@ public class EntityGrenadeIFBrimstone extends EntityGrenadeBouncyBase {
     		
     		worldObj.newExplosion(this, posX, posY, posZ, 5, false, false);
     		
-    		for(int i = 0; i < 50; i++) {
+    		for(int i = 0; i < 100; i++) {
 	    		EntityBullet fragment;
 	
 	    		fragment = new EntityBullet(worldObj, (EntityPlayer) this.thrower, 3.0F, 35, 45, false, "tauDay");
-	    		fragment.setDamage(rand.nextInt(16) + 5);
+	    		fragment.setDamage(rand.nextInt(301) + 100);
 	
 	    		fragment.motionX = rand.nextGaussian() * 0.25;
 	    		fragment.motionY = rand.nextGaussian() * 0.25;
