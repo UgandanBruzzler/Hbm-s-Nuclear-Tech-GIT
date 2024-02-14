@@ -4,10 +4,6 @@ import java.util.List;
 
 import com.hbm.entity.effect.EntityNukeTorex;
 import com.hbm.lib.Library;
-import com.hbm.util.BobMathUtil;
-import com.hbm.util.TrackerUtil;
-import com.hbm.world.WorldUtil;
-import com.hbm.world.biome.BiomeGenCraterBase;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -37,6 +33,14 @@ public class ItemWandD extends Item {
 			vnt.explode();*/
 			
 			//PollutionHandler.incrementPollution(world, pos.blockX, pos.blockY, pos.blockZ, PollutionType.SOOT, 15);
+			
+			/*int i = pos.blockX >> 4;
+			int j = pos.blockZ >> 4;
+			
+			i = (i << 4) + 8;
+			j = (j << 4) + 8;
+			Component comp = new RuralHouse1(world.rand, i, j);
+			comp.addComponentParts(world, world.rand, new StructureBoundingBox(i, j, i + 32, j + 32));*/
 			
 			/*TimeAnalyzer.startCount("setBlock");
 			world.setBlock(pos.blockX, pos.blockY, pos.blockZ, Blocks.dirt);
@@ -71,11 +75,7 @@ public class ItemWandD extends Item {
 			if(!del.isEmpty()) {
 				for(EntityNukeTorex torex : del) torex.setDead();
 			} else {
-				EntityNukeTorex torex = new EntityNukeTorex(world);
-				torex.setPositionAndRotation(pos.blockX, pos.blockY + 1, pos.blockZ, 0, 0);
-				torex.setScale((float) BobMathUtil.squirt( 1.5 ) * 1.5F);
-				world.spawnEntityInWorld(torex);
-				TrackerUtil.setTrackingRange(world, torex, 1000);
+				EntityNukeTorex.statFac(world, pos.blockX, pos.blockY + 1, pos.blockZ, 150);
 			}
 			
 			/*EntityTracker entitytracker = ((WorldServer) world).getEntityTracker();

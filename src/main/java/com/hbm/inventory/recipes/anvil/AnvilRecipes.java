@@ -312,7 +312,7 @@ public class AnvilRecipes {
 				new AStack[] {
 						new ComparableStack(Blocks.stonebrick, 8),
 						new OreDictStack(KEY_LOG, 16),
-						new OreDictStack(CU.plateWelded(), 2),
+						new OreDictStack(CU.plateCast(), 2),
 						new OreDictStack(KEY_BRICK, 16)
 				}, new AnvilOutput(new ItemStack(ModBlocks.furnace_combination))).setTier(2));
 
@@ -717,6 +717,15 @@ public class AnvilRecipes {
 						new AnvilOutput(new ItemStack(ModItems.fragment_niobium), 0.5F),
 				}
 		).setTier(2));
+
+		constructionRecipes.add(new AnvilConstructionRecipe(new ComparableStack(ModBlocks.deco_titanium), new AnvilOutput[] {new AnvilOutput(new ItemStack(ModItems.ingot_titanium, 1), 0.25F)}).setTier(1));
+		constructionRecipes.add(new AnvilConstructionRecipe(new ComparableStack(ModBlocks.deco_red_copper), new AnvilOutput[] {new AnvilOutput(new ItemStack(ModItems.ingot_red_copper, 1), 0.25F)}).setTier(1));
+		constructionRecipes.add(new AnvilConstructionRecipe(new ComparableStack(ModBlocks.deco_tungsten), new AnvilOutput[] {new AnvilOutput(new ItemStack(ModItems.ingot_tungsten, 1), 0.25F)}).setTier(1));
+		constructionRecipes.add(new AnvilConstructionRecipe(new ComparableStack(ModBlocks.deco_aluminium), new AnvilOutput[] {new AnvilOutput(new ItemStack(ModItems.ingot_aluminium, 1), 0.25F)}).setTier(1));
+		constructionRecipes.add(new AnvilConstructionRecipe(new ComparableStack(ModBlocks.deco_steel), new AnvilOutput[] {new AnvilOutput(new ItemStack(ModItems.ingot_steel, 1), 0.25F)}).setTier(1));
+		constructionRecipes.add(new AnvilConstructionRecipe(new ComparableStack(ModBlocks.deco_lead), new AnvilOutput[] {new AnvilOutput(new ItemStack(ModItems.ingot_lead, 1), 0.25F)}).setTier(1));
+		constructionRecipes.add(new AnvilConstructionRecipe(new ComparableStack(ModBlocks.deco_beryllium), new AnvilOutput[] {new AnvilOutput(new ItemStack(ModItems.ingot_beryllium, 1), 0.25F)}).setTier(1));
+		constructionRecipes.add(new AnvilConstructionRecipe(new ComparableStack(ModBlocks.deco_asbestos), new AnvilOutput[] {new AnvilOutput(new ItemStack(ModItems.ingot_asbestos, 1), 0.25F)}).setTier(1));
 
 		constructionRecipes.add(new AnvilConstructionRecipe(
 				new ComparableStack(ModBlocks.heater_firebox),

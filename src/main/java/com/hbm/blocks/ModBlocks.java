@@ -335,6 +335,14 @@ public class ModBlocks {
 	public static Block lantern;
 	public static Block lantern_behemoth;
 
+	public static Block spotlight_incandescent;
+	public static Block spotlight_incandescent_off;
+	public static Block spotlight_fluoro;
+	public static Block spotlight_fluoro_off;
+	public static Block spotlight_halogen;
+	public static Block spotlight_halogen_off;
+	public static Block spotlight_beam;
+
 	public static Block reinforced_stone;
 	public static Block concrete_smooth;
 	public static Block concrete_colored;
@@ -887,6 +895,8 @@ public class ModBlocks {
 	public static Block cm_tank;
 	public static Block cm_circuit;
 	public static Block cm_port;
+	public static Block cm_flux;
+	public static Block cm_heat;
 	public static Block custom_machine;
 	public static Block cm_anchor;
 	
@@ -985,6 +995,7 @@ public class ModBlocks {
 	public static Block fraction_spacer;
 	public static Block machine_catalytic_cracker;
 	public static Block machine_catalytic_reformer;
+	public static Block machine_hydrotreater;
 	public static Block machine_coker;
 
 	public static Block machine_boiler_off;
@@ -1034,11 +1045,11 @@ public class ModBlocks {
 	public static Block machine_orbus;
 
 	public static Block launch_pad;
+	public static Block launch_pad_large;
 	
 	public static Block machine_missile_assembly;
 	
 	public static Block compact_launcher;
-	
 	public static Block launch_table;
 	
 	public static Block soyuz_launcher;
@@ -1546,16 +1557,24 @@ public class ModBlocks {
 		reinforced_laminate = new BlockNTMGlassCT(1, RefStrings.MODID + ":reinforced_laminate", Material.rock, true).setBlockName("reinforced_laminate").setCreativeTab(MainRegistry.blockTab).setLightOpacity(0).setHardness(15.0F).setResistance(300.0F);
 		reinforced_laminate_pane = new BlockNTMGlassPane(1, RefStrings.MODID + ":reinforced_laminate_pane", RefStrings.MODID + ":reinforced_laminate_pane_edge", Material.rock, true).setBlockName("reinforced_laminate_pane").setCreativeTab(MainRegistry.blockTab).setLightOpacity(1).setHardness(15.0F).setResistance(300.0F);
 		
-		lamp_tritium_green_off = new ReinforcedLamp(Material.redstoneLight, false).setBlockName("lamp_tritium_green_off").setStepSound(Block.soundTypeGlass).setCreativeTab(MainRegistry.blockTab).setHardness(3.0F).setBlockTextureName(RefStrings.MODID + ":lamp_tritium_green_off");
-		lamp_tritium_green_on = new ReinforcedLamp(Material.redstoneLight, true).setBlockName("lamp_tritium_green_on").setStepSound(Block.soundTypeGlass).setHardness(3.0F).setBlockTextureName(RefStrings.MODID + ":lamp_tritium_green_on");
-		lamp_tritium_blue_off = new ReinforcedLamp(Material.redstoneLight, false).setBlockName("lamp_tritium_blue_off").setStepSound(Block.soundTypeGlass).setCreativeTab(MainRegistry.blockTab).setHardness(3.0F).setBlockTextureName(RefStrings.MODID + ":lamp_tritium_blue_off");
-		lamp_tritium_blue_on = new ReinforcedLamp(Material.redstoneLight, true).setBlockName("lamp_tritium_blue_on").setStepSound(Block.soundTypeGlass).setHardness(3.0F).setBlockTextureName(RefStrings.MODID + ":lamp_tritium_blue_on");
+		lamp_tritium_green_off = new TritiumLamp(Material.redstoneLight, false).setBlockName("lamp_tritium_green_off").setStepSound(Block.soundTypeGlass).setCreativeTab(MainRegistry.blockTab).setHardness(3.0F).setBlockTextureName(RefStrings.MODID + ":lamp_tritium_green_off");
+		lamp_tritium_green_on = new TritiumLamp(Material.redstoneLight, true).setBlockName("lamp_tritium_green_on").setStepSound(Block.soundTypeGlass).setHardness(3.0F).setBlockTextureName(RefStrings.MODID + ":lamp_tritium_green_on");
+		lamp_tritium_blue_off = new TritiumLamp(Material.redstoneLight, false).setBlockName("lamp_tritium_blue_off").setStepSound(Block.soundTypeGlass).setCreativeTab(MainRegistry.blockTab).setHardness(3.0F).setBlockTextureName(RefStrings.MODID + ":lamp_tritium_blue_off");
+		lamp_tritium_blue_on = new TritiumLamp(Material.redstoneLight, true).setBlockName("lamp_tritium_blue_on").setStepSound(Block.soundTypeGlass).setHardness(3.0F).setBlockTextureName(RefStrings.MODID + ":lamp_tritium_blue_on");
 
 		lamp_uv_off = new UVLamp(false).setBlockName("lamp_uv_off").setCreativeTab(MainRegistry.blockTab);
 		lamp_uv_on = new UVLamp(true).setBlockName("lamp_uv_on").setCreativeTab(null);
 		lamp_demon = new DemonLamp().setBlockName("lamp_demon").setStepSound(Block.soundTypeMetal).setCreativeTab(MainRegistry.blockTab).setLightLevel(1F).setHardness(3.0F).setBlockTextureName(RefStrings.MODID + ":lamp_demon");
 		lantern = new BlockLantern().setBlockName("lantern").setStepSound(Block.soundTypeMetal).setCreativeTab(MainRegistry.blockTab).setLightLevel(1F).setHardness(3.0F).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		lantern_behemoth = new BlockLanternBehemoth().setBlockName("lantern_behemoth").setStepSound(Block.soundTypeMetal).setCreativeTab(null).setHardness(3.0F).setBlockTextureName(RefStrings.MODID + ":block_rust");
+
+		spotlight_incandescent = new Spotlight(Material.iron, 2, LightType.INCANDESCENT, true).setBlockName("spotlight_incandescent").setCreativeTab(MainRegistry.blockTab).setBlockTextureName(RefStrings.MODID + ":cage_lamp");
+		spotlight_incandescent_off = new Spotlight(Material.iron, 2, LightType.INCANDESCENT, false).setBlockName("spotlight_incandescent_off").setBlockTextureName(RefStrings.MODID + ":cage_lamp_off");
+		spotlight_fluoro = new SpotlightModular(Material.iron, 8, LightType.FLUORESCENT, true).setBlockName("spotlight_fluoro").setCreativeTab(MainRegistry.blockTab).setBlockTextureName(RefStrings.MODID + ":fluorescent_lamp");
+		spotlight_fluoro_off = new SpotlightModular(Material.iron, 8, LightType.FLUORESCENT, false).setBlockName("spotlight_fluoro_off").setBlockTextureName(RefStrings.MODID + ":fluorescent_lamp_off");
+		spotlight_halogen = new Spotlight(Material.iron, 32, LightType.HALOGEN, true).setBlockName("spotlight_halogen").setCreativeTab(MainRegistry.blockTab).setBlockTextureName(RefStrings.MODID + ":flood_lamp");
+		spotlight_halogen_off = new Spotlight(Material.iron, 32, LightType.HALOGEN, false).setBlockName("spotlight_halogen_off").setBlockTextureName(RefStrings.MODID + ":flood_lamp_off");
+		spotlight_beam = new SpotlightBeam().setBlockName("spotlight_beam");
 		
 		reinforced_stone = new BlockGeneric(Material.rock).setBlockName("reinforced_stone").setCreativeTab(MainRegistry.blockTab).setHardness(15.0F).setResistance(100.0F).setBlockTextureName(RefStrings.MODID + ":reinforced_stone");
 		concrete_smooth = new BlockRadResistant(Material.rock).setBlockName("concrete_smooth").setCreativeTab(MainRegistry.blockTab).setHardness(15.0F).setResistance(140.0F).setBlockTextureName(RefStrings.MODID + ":concrete");
@@ -2045,6 +2064,8 @@ public class ModBlocks {
 		cm_tank = new BlockCMGlass(Material.iron, EnumCMMaterials.class, true, true).setBlockName("cm_tank").setCreativeTab(MainRegistry.machineTab).setHardness(5.0F).setResistance(10.0F).setBlockTextureName(RefStrings.MODID + ":cm_tank");
 		cm_circuit = new BlockCM(Material.iron, EnumCMCircuit.class, true, true).setBlockName("cm_circuit").setCreativeTab(MainRegistry.machineTab).setHardness(5.0F).setResistance(10.0F).setBlockTextureName(RefStrings.MODID + ":cm_circuit");
 		cm_port = new BlockCMPort(Material.iron, EnumCMMaterials.class, true, true).setBlockName("cm_port").setCreativeTab(MainRegistry.machineTab).setHardness(5.0F).setResistance(10.0F).setBlockTextureName(RefStrings.MODID + ":cm_port");
+		cm_flux = new BlockCMFlux(Material.iron, RefStrings.MODID + ":cm_flux_top").setBlockName("cm_flux").setCreativeTab(MainRegistry.machineTab).setHardness(5.0F).setResistance(10.0F).setBlockTextureName(RefStrings.MODID + ":cm_flux_side");
+		cm_heat = new BlockCMHeat(Material.iron, RefStrings.MODID +":cm_heat_top").setBlockName("cm_heat").setCreativeTab(MainRegistry.machineTab).setHardness(5.0F).setResistance(10.0F).setBlockTextureName(RefStrings.MODID + ":cm_heat_side");
 		custom_machine = new BlockCustomMachine().setBlockName("custom_machine").setCreativeTab(MainRegistry.machineTab).setLightLevel(1F).setHardness(5.0F).setResistance(10.0F);
 		cm_anchor = new BlockCMAnchor().setBlockName("custom_machine_anchor").setCreativeTab(MainRegistry.machineTab).setHardness(5.0F).setResistance(10.0F);
 
@@ -2139,6 +2160,7 @@ public class ModBlocks {
 		tesla = new MachineTesla(Material.iron).setBlockName("tesla").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.blockTab).setBlockTextureName(RefStrings.MODID + ":tesla");
 
 		launch_pad = new LaunchPad(Material.iron).setBlockName("launch_pad").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.missileTab).setBlockTextureName(RefStrings.MODID + ":launch_pad");
+		launch_pad_large = new LaunchPadLarge(Material.iron).setBlockName("launch_pad_large").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.missileTab).setBlockTextureName(RefStrings.MODID + ":concrete_smooth");
 		machine_radar = new MachineRadar(Material.iron).setBlockName("machine_radar").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.missileTab).setBlockTextureName(RefStrings.MODID + ":machine_radar");
 		machine_radar_large = new MachineRadarLarge(Material.iron).setBlockName("machine_radar_large").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.missileTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		radar_screen = new MachineRadarScreen(Material.iron).setBlockName("radar_screen").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.missileTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
@@ -2249,6 +2271,7 @@ public class ModBlocks {
 		fraction_spacer = new FractionSpacer(Material.iron).setBlockName("fraction_spacer").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		machine_catalytic_cracker = new MachineCatalyticCracker(Material.iron).setBlockName("machine_catalytic_cracker").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		machine_catalytic_reformer = new MachineCatalyticReformer(Material.iron).setBlockName("machine_catalytic_reformer").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
+		machine_hydrotreater = new MachineHydrotreater(Material.iron).setBlockName("machine_hydrotreater").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		machine_coker = new MachineCoker(Material.iron).setBlockName("machine_coker").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		machine_autosaw = new MachineAutosaw().setBlockName("machine_autosaw").setHardness(5.0F).setResistance(10.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
 		machine_excavator = new MachineExcavator().setBlockName("machine_excavator").setHardness(5.0F).setResistance(100.0F).setCreativeTab(MainRegistry.machineTab).setBlockTextureName(RefStrings.MODID + ":block_steel");
@@ -2732,6 +2755,13 @@ public class ModBlocks {
 		GameRegistry.registerBlock(lamp_demon, lamp_demon.getUnlocalizedName());
 		GameRegistry.registerBlock(lantern, lantern.getUnlocalizedName());
 		GameRegistry.registerBlock(lantern_behemoth, lantern_behemoth.getUnlocalizedName());
+		GameRegistry.registerBlock(spotlight_incandescent, spotlight_incandescent.getUnlocalizedName());
+		GameRegistry.registerBlock(spotlight_incandescent_off, spotlight_incandescent_off.getUnlocalizedName());
+		GameRegistry.registerBlock(spotlight_fluoro, spotlight_fluoro.getUnlocalizedName());
+		GameRegistry.registerBlock(spotlight_fluoro_off, spotlight_fluoro_off.getUnlocalizedName());
+		GameRegistry.registerBlock(spotlight_halogen, spotlight_halogen.getUnlocalizedName());
+		GameRegistry.registerBlock(spotlight_halogen_off, spotlight_halogen_off.getUnlocalizedName());
+		GameRegistry.registerBlock(spotlight_beam, spotlight_beam.getUnlocalizedName());
 
 		//Reinforced Blocks
 		GameRegistry.registerBlock(asphalt, ItemBlockBlastInfo.class, asphalt.getUnlocalizedName());
@@ -3357,6 +3387,7 @@ public class ModBlocks {
 		register(fraction_spacer);
 		register(machine_catalytic_cracker);
 		register(machine_catalytic_reformer);
+		register(machine_hydrotreater);
 		register(machine_coker);
 		register(machine_autosaw);
 		register(machine_excavator);
@@ -3409,6 +3440,8 @@ public class ModBlocks {
 		register(cm_tank);
 		register(cm_circuit);
 		register(cm_port);
+		register(cm_flux);
+		register(cm_heat);
 		register(cm_anchor);
 		
 		//PWR
@@ -3472,6 +3505,7 @@ public class ModBlocks {
 		//Missile Blocks
 		GameRegistry.registerBlock(machine_missile_assembly, machine_missile_assembly.getUnlocalizedName());
 		GameRegistry.registerBlock(launch_pad, launch_pad.getUnlocalizedName());
+		GameRegistry.registerBlock(launch_pad_large, launch_pad_large.getUnlocalizedName());
 		GameRegistry.registerBlock(compact_launcher, compact_launcher.getUnlocalizedName());
 		GameRegistry.registerBlock(launch_table, launch_table.getUnlocalizedName());
 		GameRegistry.registerBlock(soyuz_launcher, soyuz_launcher.getUnlocalizedName());
