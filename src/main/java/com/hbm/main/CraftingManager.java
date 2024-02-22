@@ -13,6 +13,7 @@ import com.hbm.config.GeneralConfig;
 import com.hbm.crafting.*;
 import com.hbm.crafting.handlers.*;
 import com.hbm.inventory.OreDictManager;
+import com.hbm.inventory.OreDictManager.DictFrame;
 import com.hbm.inventory.fluid.Fluids;
 import com.hbm.inventory.material.Mats;
 
@@ -765,9 +766,8 @@ public class CraftingManager {
 		addRecipeAuto(new ItemStack(Blocks.torch, 8), new Object[] { "L", "S", 'L', ANY_COKE.gem(), 'S', KEY_STICK });
 
 		addRecipeAuto(new ItemStack(ModBlocks.machine_missile_assembly, 1), new Object[] { "CCC", "CCC", "CCC", 'C', ModItems.b_smoke8 });
-		addRecipeAuto(new ItemStack(ModBlocks.struct_launcher, 4), new Object[] { "PPP", "SDS", "CCC", 'P', STEEL.plate(), 'S', ModBlocks.steel_scaffold, 'D', ModBlocks.deco_pipe_quad, 'C', ModBlocks.concrete_smooth });
-		addRecipeAuto(new ItemStack(ModBlocks.struct_launcher, 4), new Object[] { "PPP", "SDS", "CCC", 'P', STEEL.plate(), 'S', ModBlocks.steel_scaffold, 'D', ModBlocks.deco_pipe_quad, 'C', ModBlocks.concrete });
-		addRecipeAuto(new ItemStack(ModBlocks.struct_scaffold, 4), new Object[] { "SSS", "DCD", "SSS", 'S', ModBlocks.steel_scaffold, 'D', new ItemStack(ModBlocks.fluid_duct_neo, 1, OreDictionary.WILDCARD_VALUE), 'C', ModBlocks.red_cable });
+		addRecipeAuto(new ItemStack(ModBlocks.struct_launcher, 8), new Object[] { "PPP", "SDS", "CCC", 'P', STEEL.plate(), 'S', ModBlocks.steel_scaffold, 'D', ModBlocks.deco_pipe_quad, 'C', ANY_CONCRETE.any() });
+		addRecipeAuto(new ItemStack(ModBlocks.struct_scaffold, 8), new Object[] { "SSS", "DCD", "SSS", 'S', ModBlocks.steel_scaffold, 'D', new ItemStack(ModBlocks.fluid_duct_neo, 1, OreDictionary.WILDCARD_VALUE), 'C', ModBlocks.red_cable });
 
 		addRecipeAuto(new ItemStack(ModItems.seg_10, 1), new Object[] { "P", "S", "B", 'P', AL.plate(), 'S', ModBlocks.steel_scaffold, 'B', ModBlocks.steel_beam });
 		addRecipeAuto(new ItemStack(ModItems.seg_15, 1), new Object[] { "PP", "SS", "BB", 'P', TI.plate(), 'S', ModBlocks.steel_scaffold, 'B', ModBlocks.steel_beam });
@@ -1188,6 +1188,8 @@ public class CraftingManager {
 		addRecipeAuto(new ItemStack(ModBlocks.cm_circuit, 1, 4), " I ", "IMI", " I ", 'I', STEEL.ingot(), 'M', ModItems.circuit_schrabidium);
 		addRecipeAuto(new ItemStack(ModBlocks.cm_flux, 1, 0), "NNN", "ZCZ", "NNN", 'Z', ZR.plateCast(), 'N', ModItems.neutron_reflector, 'C', ModItems.reactor_core);
 		addRecipeAuto(new ItemStack(ModBlocks.cm_heat, 1, 0), "PCP", "PCP", "PCP", 'P', ModItems.plate_polymer, 'C', CU.ingot());
+
+		addShapelessAuto(new ItemStack(ModItems.missile_soyuz), new ItemStack(ModItems.missile_carrier));
 	}
 	
 	public static void crumple() {
